@@ -1,0 +1,120 @@
+[
+  {
+    "name": "product",
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "price",
+        "type": "number"
+      },
+      {
+        "name": "main_image",
+        "type": "image",
+        "options": {
+          "hotspot": true
+        }
+      },
+      {
+        "name": "gallery",
+        "type": "array",
+        "of": [
+          {
+            "name": "images",
+            "type": "image",
+            "options": {
+              "hotspot": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "maker",
+        "type": "reference",
+        "to": [
+          {
+            "type": "maker"
+          }
+        ]
+      },
+      {
+        "name": "related_products",
+        "type": "array",
+        "of": [
+          {
+            "name": "products",
+            "type": "reference",
+            "to": [
+              {
+                "type": "product"
+              }
+            ],
+            "options": {
+              "disableNew": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "slug",
+        "type": "slug"
+      }
+    ]
+  },
+  {
+    "name": "maker",
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "bio",
+        "type": "text"
+      },
+      {
+        "name": "slug",
+        "type": "slug"
+      }
+    ]
+  },
+  {
+    "name": "page",
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "image",
+        "type": "image"
+      },
+      {
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "name": "modules",
+        "type": "array",
+        "of": [
+          {
+            "name": "image_module",
+            "type": "object",
+            "fields": [
+              {
+                "name": "image",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

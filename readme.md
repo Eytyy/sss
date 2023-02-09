@@ -1,3 +1,5 @@
+**work in progress**
+
 # SSS
 
 Speed up the development of web apps built with Sanity & Next.js
